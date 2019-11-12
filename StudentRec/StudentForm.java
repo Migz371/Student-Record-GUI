@@ -35,7 +35,7 @@ public class StudentForm implements ActionListener, ItemListener, KeyListener {
    
     
     /* BUTTONS,FORM AND PANELS */
-    private JFrame jfForm; // Declaring of jfForm
+    private JFrame jfForm; 
     private JPanel jpAdd,jpSearch,jpDelete,jpView,jpUpdate;
     private JButton jbClear,jbAdd,jbSearch,jbDelete,jbUpdate,jbNext,jbPrevious,jbFirst,jbLast; 
     
@@ -50,8 +50,8 @@ public class StudentForm implements ActionListener, ItemListener, KeyListener {
     private JLabel jlName,jlAge,jlAddress,jlGender,jlCourse,jlCourseIndicator,jlYrlvl,jlSpecialization,jlConcom,jlThesis; //Add Student Field 
     private JTextField jtfName,jtfAddress;
     private JRadioButton jrbMale, jrbFemale;
-    private ButtonGroup bgGender; // groups radio button
-    private JPanel jpGender; // groups every radio button
+    private ButtonGroup bgGender; 
+    private JPanel jpGender; 
     private JComboBox jmbAgeBS, jmbAgeMS,jmbCourse,jmbyrlvlMS,jmbspecializationBS,jmbyrlvlBS,jmbspecializationMS,jmbconcom,jmbthesis;
            
     
@@ -59,31 +59,31 @@ public class StudentForm implements ActionListener, ItemListener, KeyListener {
     private JLabel jlSname,jlSage,jlSaddress,jlScourse,jlSname2,jlSyrlvl,jlSconcom,jlSthesis,jlSspecialization; 
     private JTextField jtfSname,jtfSname2,jtfSage,jtfSaddress,jtfSyrlvl,jtfSspecialization,jtfSthesis,jtfSconcom;
     private JRadioButton jrbSBSIT, jrbSBSCS,jrbSMSCS,jrbSMSIT;
-    private ButtonGroup bgScourse; // groups radio button
-    private JPanel jpScourse; // groups every radio button
+    private ButtonGroup bgScourse; 
+    private JPanel jpScourse; 
     
 
     /* --DELETE FIELD-- */
     private JLabel jlDname,jlDage,jlDaddress,jlDcourse,jlDname2,jlDyrlvl,jlDconcom,jlDthesis,jlDspecialization; 
     private JTextField jtfDname,jtfDname2,jtfDage,jtfDaddress,jtfDyrlvl,jtfDspecialization,jtfDthesis,jtfDconcom;
     private JRadioButton jrbDBSIT, jrbDBSCS,jrbDMSCS,jrbDMSIT;
-    private ButtonGroup bgDcourse; // groups radio button
-    private JPanel jpDcourse; // groups every radio button
+    private ButtonGroup bgDcourse;
+    private JPanel jpDcourse;
     
     /* --VIEW FIELD-- */
     private JLabel jlVage,jlVaddress,jlVcourse,jlVname2,jlVyrlvl,jlVconcom,jlVthesis,jlVspecialization; 
     private JTextField jtfVname2,jtfVage,jtfVaddress,jtfVyrlvl,jtfVspecialization,jtfVthesis,jtfVconcom;
     private JRadioButton jrbVBSIT, jrbVBSCS,jrbVMSCS,jrbVMSIT;
-    private ButtonGroup bgVcourse; // groups radio button
-    private JPanel jpVcourse; // groups every radio button
+    private ButtonGroup bgVcourse; 
+    private JPanel jpVcourse; 
 
     /* --UPDATE FIELD-- */
     private JLabel jlUname,jlUaddress,jlUgender,jlUyrlvl,jlUspecialization,jlUconcom,jlUthesis,jlUcourse,jlUname2;
     private JTextField jtfUname,jtfUaddress,jtfUname2;
     private JComboBox jmbUyrlvlMS,jmbUspecializationBS,jmbUyrlvlBS,jmbUspecializationMS,jmbUconcom,jmbUthesis;
     private JRadioButton jrbUBSIT, jrbUBSCS,jrbUMSCS,jrbUMSIT;
-    private ButtonGroup bgUcourse; // groups radio button
-    private JPanel jpUcourse; // groups every radio button
+    private ButtonGroup bgUcourse;
+    private JPanel jpUcourse; 
     
 public StudentForm(){
   
@@ -483,8 +483,6 @@ public void launch(){
     jbClear.setBounds(340, 250, 140, 50); 
     jbAdd.addActionListener(this);
     jbClear.addActionListener(this);
-
- 
     
     /*JPANEL GROUP */ 
      jpAdd.add(jlName);
@@ -516,11 +514,7 @@ public void launch(){
      jpAdd.setBounds(0,20,501,401);
      jfForm.add(jpAdd);
             
-            
-            
            
-    
-    
     /* ---------------------SEARCH FIELD---------------------------*/
     
     
@@ -614,8 +608,6 @@ public void launch(){
     jlSconcom.setVisible(false);
     jtfSconcom.setVisible(false);
        
-    
-    
     /*JPANEL GROUP*/
     jpSearch.add(jlSyrlvl);
     jpSearch.add(jtfSyrlvl);
@@ -641,8 +633,7 @@ public void launch(){
     jfForm.add(jpSearch);
     jpSearch.setVisible(false);
     
-    
-    
+  
     
      /* ---------------------DELETE FIELD---------------------------*/
     
@@ -736,9 +727,7 @@ public void launch(){
     jtfDconcom.addKeyListener(this);
     jlDconcom.setVisible(false);
     jtfDconcom.setVisible(false);
-       
-    
-    
+     
     
         /*JPANEL GROUP*/
     jpDelete.add(jlDyrlvl);
@@ -862,7 +851,6 @@ public void launch(){
     jtfVconcom.setVisible(false);
        
     
-  
         /*JPANEL GROUP*/
     jpView.add(jlVyrlvl);
     jpView.add(jtfVyrlvl);
@@ -1000,14 +988,6 @@ public void launch(){
     jpUpdate.setBounds(0,0,501,401);
     jfForm.add(jpUpdate);
     jpUpdate.setVisible(false);
-
-    
-    
-
-
-    
-
-
 }
 
     @Override
@@ -1403,32 +1383,59 @@ public void launch(){
  
         /*--------------- UPDATE FIELD BUTTON ---------------*/ 
         
+        if(jbUpdate == e.getSource()){  
+          try { 
+                String Uname = jtfUname.getText();
+                String Uaddress = jtfUaddress.getText();
+                String Uname2 = jtfUname2.getText();
+               
+                  /*--------- BSIT UPDATE ---------*/ 
+                if(jrbUBSIT.isSelected()){
+                    int UyrlvlBS = Integer.parseInt(jmbUyrlvlBS.getSelectedItem().toString());
+                    String sqlStatement = "UPDATE bsit SET Name = '"+Uname2+"',Address = '"+Uaddress+"',`Year Level` = '"+UyrlvlBS+"' WHERE name = '"+Uname+"'";                  
+                    stmt.executeUpdate(sqlStatement);
+                    conn.close();                
+                    dataBaseConnection();
+                }
+                
+                 /*--------- MSIT UPDATE ---------*/ 
+                if(jrbUMSIT.isSelected()){
+                    int UyrlvlMS = Integer.parseInt(jmbUyrlvlMS.getSelectedItem().toString()); 
+                    String Uthesis = jmbUthesis.getSelectedItem().toString();
+                    String sqlStatement = "UPDATE msit SET Name = '"+Uname2+"',Address = '"+Uaddress+"',`Year Level` = '"+UyrlvlMS+"',`Thesis Type` = '"+Uthesis+"' WHERE name = '"+Uname+"'";                  
+                    stmt.executeUpdate(sqlStatement);
+                    conn.close();                
+                    dataBaseConnection();
+                }
+                
+                /*--------- BSCS UPDATE ---------*/ 
+                if(jrbUBSCS.isSelected()){
+                    String UspecializationBS = jmbUspecializationBS.getSelectedItem().toString();  
+                    String sqlStatement = "UPDATE bscs SET Name = '"+Uname2+"',Address = '"+Uaddress+"',Specialization = '"+UspecializationBS+"' WHERE name = '"+Uname+"'";                  
+                    stmt.executeUpdate(sqlStatement);
+                    conn.close();                
+                    dataBaseConnection();
+                }
             
-  /*  
-          try {  // MAKE ADD YOUR REFERENCE 
+                /*--------- MSCS UPDATE ---------*/ 
+                if(jrbUMSCS.isSelected()){
+                    String UspecializationMS = jmbUspecializationMS.getSelectedItem().toString();  
+                    String Uconcom = jmbUconcom.getSelectedItem().toString();
+                    String sqlStatement = "UPDATE mscs SET Name = '"+Uname2+"',Address = '"+Uaddress+"',Specialization = '"+UspecializationMS+"',`Connected Company Type` = '"+Uconcom+"' WHERE name = '"+Uname+"'";                  
+                    stmt.executeUpdate(sqlStatement);
+                    conn.close();                
+                    dataBaseConnection();
+                }
+     
           } catch (SQLException ex) {
           }  
-              
- SELECT * FROM `msit` ORDER BY `msit`.`Thesis Type` ASC
-
-UPDATE msit SET Course = 'eat', Address = 'Tae' WHERE name = 'Altina Orion';
-
-UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Orion'; */
-                
-            
+          
+      }
         
-  
-          
-          
-          
-          
-          
-          
-          
-          
-          
-         
-        /*-------- MENU BAR ACTIONS --------*/
+        
+        
+    /*--------------- MENU ACTIONS ---------------*/   
+        
         if(jmiAdd == e.getSource()){
             jpAdd.setVisible(true);
             jpSearch.setVisible(false);
@@ -1477,7 +1484,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
     @Override
     public void itemStateChanged(ItemEvent e){
       
-        /*-------- ADD RELATED ---------*/
+          /*--------------- ADD RELATED FIELD ---------------*/ 
        
         // Make BS Age or MS Age appear
         if(jmbCourse.getSelectedItem().equals("BSIT") || jmbCourse.getSelectedItem().equals("BSCS")){ 
@@ -1543,7 +1550,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
         
         
       
-          /*-------- SEARCH RELATED ---------*/
+          /*--------------- SEARCH FIELD RELATED ---------------*/ 
         
         //BSIT & MSIT RADIO LISTENER
         if(jrbSBSIT.isSelected() || jrbSMSIT.isSelected()){          
@@ -1600,7 +1607,9 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
             jtfSconcom.setVisible(false);   
         }
         
-           /*-------- DELETE RELATED ---------*/
+        
+        
+          /*--------------- DELETE FIELD RELATED ---------------*/ 
         
         //BSIT & MSIT RADIO LISTENER
         if(jrbDBSIT.isSelected() || jrbDMSIT.isSelected()){          
@@ -1658,12 +1667,13 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
         }
         
         
-         /*-------- VIEW RELATED ---------*/
+         /*--------------- VIEW FIELD RELATED ---------------*/ 
         
         //BSIT & MSIT RADIO LISTENER
         if(jrbVBSIT.isSelected() || jrbVMSIT.isSelected()){          
-            try{
-            Vresult = stmt.executeQuery("select * from bsit"); 
+            try{  
+            Vresult = stmt.executeQuery("select * from `bsit` ORDER BY `bsit`.`Name` asc");
+             
             }catch(SQLException ex){            
             }
             
@@ -1682,7 +1692,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
             
         if(jrbVMSIT.isSelected()){
             try{
-            Vresult = stmt.executeQuery("select * from msit"); 
+            Vresult = stmt.executeQuery("select * from `msit` ORDER BY `msit`.`Name` asc");            
             }catch(SQLException ex){            
             }
                 
@@ -1699,7 +1709,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
         //BSCS & MSCS RADIO LISTENER
         if(jrbVBSCS.isSelected() || jrbVMSCS.isSelected()){
             try{
-            Vresult = stmt.executeQuery("select * from bscs"); 
+            Vresult = stmt.executeQuery("select * from `bscs` ORDER BY `bscs`.`Name` asc"); 
             }catch(SQLException ex){            
             }  
             
@@ -1719,7 +1729,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
             
             if(jrbVMSCS.isSelected()){
                try{
-               Vresult = stmt.executeQuery("select * from mscs"); 
+               Vresult = stmt.executeQuery("select * from `mscs` ORDER BY `mscs`.`Name` asc"); 
                }catch(SQLException ex){            
                }
                 
@@ -1735,7 +1745,7 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
         }
         
         
-          /*-------- UPDATE RELATED ---------*/
+         /*--------------- UPDATE FIELD RELATED ---------------*/ 
         
         //BSIT & MSIT RADIO LISTENER
         if(jrbUBSIT.isSelected() || jrbUMSIT.isSelected()){          
@@ -1801,19 +1811,11 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
         }
 
         
-         jlCourseIndicator.setText(jmbCourse.getSelectedItem().toString()+":"); // COURSE INDICATOR
-        
-        
-     
-        
+         jlCourseIndicator.setText(jmbCourse.getSelectedItem().toString()+":"); // COURSE INDICATOR   
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        if(!Character.isLetter(e.getKeyChar())){
-            e.setKeyChar('\u0000');
-        }
-        
         e.setKeyChar('\u0000'); // Test so no text can be typed
     }
 
@@ -1826,8 +1828,6 @@ UPDATE msit SET `Year Level` = 5, `Thesis Type` = 'Tae' WHERE name = 'Altina Ori
     public void keyReleased(KeyEvent e) {
        
     }
-    
-    
-    
+   
     }
       
