@@ -389,7 +389,7 @@ public void launch(){
     jtfName.setBounds(90,40,200,20); // adds message box for input 
     jlName.setBounds(5,40,100,20);
     jlName.setFont(new Font("Arial",Font.BOLD,15)); //sets text decoration & size
-   
+    jtfName.addKeyListener(this);
     
     
      /* AGE */
@@ -522,6 +522,7 @@ public void launch(){
     jlSname.setBounds(4,230,140,20);
     jlSname.setFont(new Font("Arial",Font.BOLD,15));
     jtfSname.setBounds(120,230,200,20);
+    jtfSname.addKeyListener(this);
     
     /* COURSE SELECT */
     jlScourse.setBounds(3,270,140,20);
@@ -562,25 +563,25 @@ public void launch(){
     jlSname2.setBounds(40, 0, 140, 50);
     jlSname2.setFont(new Font("Arial",Font.BOLD,15));
     jtfSname2.setBounds(200, 10, 230, 30);
-    jtfSname2.addKeyListener(this);
+    jtfSname2.setFocusable(false);
     
     //Age
     jlSage.setBounds(40, 40, 140, 50);
     jlSage.setFont(new Font("Arial",Font.BOLD,15));
     jtfSage.setBounds(200, 50, 230, 30);
-    jtfSage.addKeyListener(this);
+    jtfSage.setFocusable(false);
 
     //Address
     jlSaddress.setBounds(40, 80, 140, 50);
     jlSaddress.setFont(new Font("Arial",Font.BOLD,15));
     jtfSaddress.setBounds(200, 90, 230, 30);
-    jtfSaddress.addKeyListener(this);
+    jtfSaddress.setFocusable(false);
     
     //Year Level
     jlSyrlvl.setBounds(40, 120, 140, 50);
     jlSyrlvl.setFont(new Font("Arial",Font.BOLD,15));
     jtfSyrlvl.setBounds(200, 130, 230, 30);
-    jtfSyrlvl.addKeyListener(this);
+    jtfSyrlvl.setFocusable(false);
     jlSyrlvl.setVisible(false);
     jtfSyrlvl.setVisible(false);
     
@@ -588,7 +589,7 @@ public void launch(){
     jlSspecialization.setBounds(40, 120, 140, 50);
     jlSspecialization.setFont(new Font("Arial",Font.BOLD,15));
     jtfSspecialization.setBounds(200, 130, 230, 30);
-    jtfSspecialization.addKeyListener(this);
+    jtfSspecialization.setFocusable(false);
     jlSspecialization.setVisible(false);
     jtfSspecialization.setVisible(false);
     
@@ -596,7 +597,7 @@ public void launch(){
     jlSthesis.setBounds(40, 160, 140, 50);
     jlSthesis.setFont(new Font("Arial",Font.BOLD,15));
     jtfSthesis.setBounds(200, 170, 230, 30);
-    jtfSthesis.addKeyListener(this);
+    jtfSthesis.setFocusable(false);
     jlSthesis.setVisible(false);
     jtfSthesis.setVisible(false);
     
@@ -604,7 +605,7 @@ public void launch(){
     jlSconcom.setBounds(40, 160, 140, 50);
     jlSconcom.setFont(new Font("Arial",Font.BOLD,15));
     jtfSconcom.setBounds(200, 170, 230, 30);
-    jtfSconcom.addKeyListener(this);
+    jtfSconcom.setFocusable(false);
     jlSconcom.setVisible(false);
     jtfSconcom.setVisible(false);
        
@@ -641,6 +642,7 @@ public void launch(){
     jlDname.setBounds(4,230,140,20);
     jlDname.setFont(new Font("Arial",Font.BOLD,15));
     jtfDname.setBounds(120,230,200,20);
+    jtfDname.addKeyListener(this);
     
     /* COURSE SELECT */
     jlDcourse.setBounds(3,270,140,20);
@@ -682,25 +684,25 @@ public void launch(){
     jlDname2.setBounds(40, 0, 140, 50);
     jlDname2.setFont(new Font("Arial",Font.BOLD,15));
     jtfDname2.setBounds(200, 10, 230, 30);
-    jtfDname2.addKeyListener(this);
+    jtfDname2.setFocusable(false);
     
     //AGE
     jlDage.setBounds(40, 40, 140, 50);
     jlDage.setFont(new Font("Arial",Font.BOLD,15));
     jtfDage.setBounds(200, 50, 230, 30);
-    jtfDage.addKeyListener(this);
+    jtfDage.setFocusable(false);
 
     //ADDRESS
     jlDaddress.setBounds(40, 80, 140, 50);
     jlDaddress.setFont(new Font("Arial",Font.BOLD,15));
     jtfDaddress.setBounds(200, 90, 230, 30);
-    jtfDaddress.addKeyListener(this); 
+    jtfDaddress.setFocusable(false);
     
     //Year Level
     jlDyrlvl.setBounds(40, 120, 140, 50);
     jlDyrlvl.setFont(new Font("Arial",Font.BOLD,15));
     jtfDyrlvl.setBounds(200, 130, 230, 30);
-    jtfDyrlvl.addKeyListener(this);
+    jtfDyrlvl.setFocusable(false);
     jlDyrlvl.setVisible(false);
     jtfDyrlvl.setVisible(false);
     
@@ -708,7 +710,7 @@ public void launch(){
     jlDspecialization.setBounds(40, 120, 140, 50);
     jlDspecialization.setFont(new Font("Arial",Font.BOLD,15));
     jtfDspecialization.setBounds(200, 130, 230, 30);
-    jtfDspecialization.addKeyListener(this);
+    jtfDspecialization.setFocusable(false);
     jlDspecialization.setVisible(false);
     jtfDspecialization.setVisible(false);
     
@@ -716,7 +718,7 @@ public void launch(){
     jlDthesis.setBounds(40, 160, 140, 50);
     jlDthesis.setFont(new Font("Arial",Font.BOLD,15));
     jtfDthesis.setBounds(200, 170, 230, 30);
-    jtfDthesis.addKeyListener(this);
+    jtfDthesis.setFocusable(false);
     jlDthesis.setVisible(false);
     jtfDthesis.setVisible(false);
     
@@ -724,7 +726,7 @@ public void launch(){
     jlDconcom.setBounds(40, 160, 140, 50);
     jlDconcom.setFont(new Font("Arial",Font.BOLD,15));
     jtfDconcom.setBounds(200, 170, 230, 30);
-    jtfDconcom.addKeyListener(this);
+    jtfDconcom.setFocusable(false);
     jlDconcom.setVisible(false);
     jtfDconcom.setVisible(false);
      
@@ -804,25 +806,25 @@ public void launch(){
     jlVname2.setBounds(40, 0, 140, 50);
     jlVname2.setFont(new Font("Arial",Font.BOLD,15));
     jtfVname2.setBounds(200, 10, 230, 30);
-    jtfVname2.addKeyListener(this);
+    jtfVname2.setFocusable(false);
     
     //AGE
     jlVage.setBounds(40, 40, 140, 50);
     jlVage.setFont(new Font("Arial",Font.BOLD,15));
     jtfVage.setBounds(200, 50, 230, 30);
-    jtfVage.addKeyListener(this);
+    jtfVage.setFocusable(false);
 
     //ADDRESS
     jlVaddress.setBounds(40, 80, 140, 50);
     jlVaddress.setFont(new Font("Arial",Font.BOLD,15));
     jtfVaddress.setBounds(200, 90, 230, 30);
-    jtfVaddress.addKeyListener(this); 
+    jtfVaddress.setFocusable(false);
     
     //Year Level
     jlVyrlvl.setBounds(40, 120, 140, 50);
     jlVyrlvl.setFont(new Font("Arial",Font.BOLD,15));
     jtfVyrlvl.setBounds(200, 130, 230, 30);
-    jtfVyrlvl.addKeyListener(this);
+    jtfVyrlvl.setFocusable(false);
     jlVyrlvl.setVisible(false);
     jtfVyrlvl.setVisible(false);
     
@@ -830,7 +832,7 @@ public void launch(){
     jlVspecialization.setBounds(40, 120, 140, 50);
     jlVspecialization.setFont(new Font("Arial",Font.BOLD,15));
     jtfVspecialization.setBounds(200, 130, 230, 30);
-    jtfVspecialization.addKeyListener(this);
+    jtfVspecialization.setFocusable(false);
     jlVspecialization.setVisible(false);
     jtfVspecialization.setVisible(false);
     
@@ -838,7 +840,7 @@ public void launch(){
     jlVthesis.setBounds(40, 160, 140, 50);
     jlVthesis.setFont(new Font("Arial",Font.BOLD,15));
     jtfVthesis.setBounds(200, 170, 230, 30);
-    jtfVthesis.addKeyListener(this);
+    jtfVthesis.setFocusable(false);
     jlVthesis.setVisible(false);
     jtfVthesis.setVisible(false);
     
@@ -846,7 +848,7 @@ public void launch(){
     jlVconcom.setBounds(40, 160, 140, 50);
     jlVconcom.setFont(new Font("Arial",Font.BOLD,15));
     jtfVconcom.setBounds(200, 170, 230, 30);
-    jtfVconcom.addKeyListener(this);
+    jtfVconcom.setFocusable(false);
     jlVconcom.setVisible(false);
     jtfVconcom.setVisible(false);
        
@@ -883,6 +885,7 @@ public void launch(){
     jlUname.setBounds(4,230,180,20);
     jlUname.setFont(new Font("Arial",Font.BOLD,15));
     jtfUname.setBounds(200,230,220,20);
+    jtfUname.addKeyListener(this);
     
     /* COURSE SELECT */
     jlUcourse.setBounds(3,270,140,20);
@@ -923,8 +926,8 @@ public void launch(){
     //NAME
     jlUname2.setBounds(40, 0, 140, 50);
     jlUname2.setFont(new Font("Arial",Font.BOLD,15));
-    jtfUname2.setBounds(200, 10, 230, 30);
-
+    jtfUname2.setBounds(200, 10, 230, 30);    
+    jtfUname2.addKeyListener(this);
   
 
     //ADDRESS
@@ -1816,7 +1819,19 @@ public void launch(){
 
     @Override
     public void keyTyped(KeyEvent e) {
-        e.setKeyChar('\u0000'); // Test so no text can be typed
+              
+        if(!Character.isLetter(e.getKeyChar())){    
+            if(Character.isWhitespace(e.getKeyChar())){
+                e.setKeyChar(' ');
+
+            }else{
+                 e.setKeyChar('\u0000');   
+            }
+        }
+        
+
+        
+     //  e.setKeyChar('\u0000'); // Test so no text can be typed
     }
 
     @Override
